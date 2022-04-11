@@ -1,0 +1,10 @@
+SPOT update
+October 22, 2021 11:25 AM
+
+Check Manuscript - Approving Prompt Fixed
+-Limit the prompt to one per approval
+
+Manuscript Status Reupload
+- Added Uplaoding Bar
+- Fixed Connection with DB
+

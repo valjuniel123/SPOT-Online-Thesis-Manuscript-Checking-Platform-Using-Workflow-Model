@@ -1,0 +1,90 @@
+<?php
+
+include("database.php");
+
+// fetch query
+$query = "SELECT acc_pendings.user_id, 
+          CONCAT(acc_pendings.user_lname,', ', acc_pendings.user_fname,' ',acc_pendings.user_mname) as name, tbl_positions.pos_name, tbl_departments.depnick 
+          FROM `acc_pendings` 
+          JOIN tbl_positions ON acc_pendings.user_position = tbl_positions.pos_id
+          JOIN tbl_departments ON acc_pendings.user_department = tbl_departments.dep_id";
+          //WHERE tbl_departments.depnick=''";
+          $sql = mysqli_query($conn, $query) or die ("System Error 1: ".mysqli_error($conn));
+
+while($row = mysqli_fetch_array($sql)) { ++$option;
+    echo "<tr id='trm_$row[0]>";
+    echo "<td class=user_id>$row[0]</td>";
+    echo "<td align=center>$row[1]</td>";
+    echo "<td align=center>$row[2]</td>";
+    echo "<td class='text-center align-middle'>";
+    echo "<button class='btn btn-warning' onclick='ApproveReg('<?php echo $row['user_id']; ?>')'>Edit</button>";
+    echo "<button class='btn btn-danger' id='testing' onclick='deleteReg('<?php echo $row['user_id']; ?>')'>Delete</button>";
+    echo "</td>";
+    echo "</tr>";
+  
+}
+
+
+function fetch_data(){
+ global $db;
+  $query="SELECT acc_pendings.user_id, 
+            CONCAT(acc_pendings.user_lname,', ', acc_pendings.user_fname,' ',acc_pendings.user_mname) as name, tbl_positions.pos_name, tbl_departments.depnick 
+            FROM `acc_pendings` 
+            JOIN tbl_positions ON acc_pendings.user_position = tbl_positions.pos_id
+            JOIN tbl_departments ON acc_pendings.user_department = tbl_departments.dep_id";
+
+
+
+  $exec=mysqli_query($db, $query);
+  if(mysqli_num_rows($exec)>0){
+    $row= mysqli_fetch_all($exec, MYSQLI_ASSOC);
+    return $row;  
+        
+  }else{
+    return $row=[];
+  }
+}
+$fetchData= fetch_data();
+show_data($fetchData);
+
+function show_data($fetchData){
+ echo '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th with>ID</th>
+                <th with>Name</th>
+                <th>Position</th>
+                <th width="20%">Actions</th>
+            </tr>
+        </thead>';
+
+ if(count($fetchData)>0){
+      $sn=1;
+      foreach($fetchData as $data){ 
+
+  echo "<tbody>
+            <tr>
+                <td>".$data['user_id']."</td>
+                <td>".$data['name']."</td>
+                <td>".$data['pos_name']."</td>
+                <td class='text-center align-middle'>
+                    <button class='btn btn-success'
+                    name='acc_butt'>Accept</button>
+                    <button class='btn btn-danger' id='testing'
+                    name='del_butt'>Delete</button>
+                </td>
+            </tr>
+        </tbody>";
+       
+  $sn++; 
+     }
+}else{
+     
+  echo "<tr>
+        <td colspan='7'>No Data Found</td>
+       </tr>"; 
+}
+  echo "</table>";
+}
+
+?>
