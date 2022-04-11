@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <!-- UPLOADING FORMATING -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body id="page-top">
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Check Manuscript</h1>
+        
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Manuscripts</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Adviser</th>
+                                <th>Leader</th>
+                                <th>Research Title</th>
+                                <th>Comments</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Date</th>
+                                <th>Adviser</th>
+                                <th>Leader</th>
+                                <th>Research Title</th>
+                                <th>Comments</th>
+                                <th>Actions</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>61</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Garrett Winters</td>
+                                <td>Accountant</td>
+                                <td>Tokyo</td>
+                                <td>63</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Ashton Cox</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>66</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Cedric Kelly</td>
+                                <td>Senior Javascript Developer</td>
+                                <td>Edinburgh</td>
+                                <td>22</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Airi Satou</td>
+                                <td>Accountant</td>
+                                <td>Tokyo</td>
+                                <td>33</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Brielle Williamson</td>
+                                <td>Integration Specialist</td>
+                                <td>New York</td>
+                                <td>61</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Herrod Chandler</td>
+                                <td>Sales Assistant</td>
+                                <td>San Francisco</td>
+                                <td>59</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Rhona Davidson</td>
+                                <td>Integration Specialist</td>
+                                <td>Tokyo</td>
+                                <td>55</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Colleen Hurst</td>
+                                <td>Javascript Developer</td>
+                                <td>San Francisco</td>
+                                <td>39</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Sonya Frost</td>
+                                <td>Software Engineer</td>
+                                <td>Edinburgh</td>
+                                <td>23</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Jena Gaines</td>
+                                <td>Office Manager</td>
+                                <td>London</td>
+                                <td>30</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Quinn Flynn</td>
+                                <td>Support Lead</td>
+                                <td>Edinburgh</td>
+                                <td>22</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Charde Marshall</td>
+                                <td>Regional Director</td>
+                                <td>San Francisco</td>
+                                <td>36</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Haley Kennedy</td>
+                                <td>Senior Marketing Designer</td>
+                                <td>London</td>
+                                <td>43</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Tatyana Fitzpatrick</td>
+                                <td>Regional Director</td>
+                                <td>London</td>
+                                <td>19</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Michael Silva</td>
+                                <td>Marketing Designer</td>
+                                <td>London</td>
+                                <td>66</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Paul Byrd</td>
+                                <td>Chief Financial Officer (CFO)</td>
+                                <td>New York</td>
+                                <td>64</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Shad Decker</td>
+                                <td>Regional Director</td>
+                                <td>Edinburgh</td>
+                                <td>51</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Michael Bruce</td>
+                                <td>Javascript Developer</td>
+                                <td>Singapore</td>
+                                <td>29</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2011/06/27</td>
+                                <td>Donna Snider</td>
+                                <td>Customer Support</td>
+                                <td>New York</td>
+                                <td>27</td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group-vertical">
+                                        <button class="btn btn-success">Approve</button>
+                                        <button class="btn btn-dark">View</button>
+                                        <button class="btn btn-danger">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
+
+</body>
+
+</html>
